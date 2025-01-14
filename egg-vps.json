@@ -5,9 +5,9 @@
         "update_url": null
     },
     "exported_at": "2024-10-03T09:26:01+00:00",
-    "name": "VPS - Egg",
-    "author": "mrnitro2017@gmail.com",
-    "description": "Read: https:\/\/github.com\/ysdragon\/Pterodactyl-VPS-Egg",
+    "name": "SVPS - Egg",
+    "author": "info@cristalcloud.nl",
+    "description": "Read: https:\/\/github.com\/effisti\/Pterodactyl-VPS-Egg",
     "features": null,
     "docker_images": {
         "quay.io\/ydrag0n\/pterodactyl-vps-egg": "quay.io\/ydrag0n\/pterodactyl-vps-egg"
