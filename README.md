@@ -1,33 +1,33 @@
 <div align="center">
 
-# Pterodactyl VPS Egg
+# CristalCloud VPS
 
 [![License](https://img.shields.io/github/license/ysdragon/Pterodactyl-VPS-Egg)](https://github.com/ysdragon/Pterodactyl-VPS-Egg/blob/main/LICENSE)
 [![CodeFactor](https://www.codefactor.io/repository/github/ysdragon/pterodactyl-vps-egg/badge)](https://www.codefactor.io/repository/github/ysdragon/pterodactyl-vps-egg)
 
-A powerful and lightweight Virtual Private Server (VPS) egg for Pterodactyl Panel, supporting multiple architectures and operating systems.
+Een krachtig en lichtgewicht Virtual Private Server (VPS) egg voor Pterodactyl Panel, dat meerdere architecturen en besturingssystemen ondersteunt.
 </div>
 
-## ✨ Features
+## ✨ Functies
 
-- 🚀 Easy deployment and management
-- 🔧 Customizable configurations
-- 🔄 Multiple architecture support
-- 🖥️ Wide range of operating systems
-- 🔌 Multiple port support (TCP/UDP)
-   - Dynamic port mapping
-- 🚀 Custom SSH server
+- 🚀 Eenvoudige implementatie en beheer
+- 🔧 Aanpasbare configuraties
+- 🔄 Ondersteuning voor meerdere architectuur
+- 🖥️ Ruim aanbod aan besturingssystemen
+- 🔌 Ondersteuning voor meerdere poorten (TCP/UDP)
+   - Dynamische poorttoewijzing
+- 🚀 Aangepaste SSH-server
 
-## 🏗️ Supported Architectures
+## 🏗️ Ondersteunde architecturen
 
-| Architecture | Status | Notes |
-|-------------|--------|-------|
-| amd64 | ✅ Full Support | Recommended for most users |
-| arm64 | ✅ Full Support | Ideal for ARM-based servers |
-| riscv64 | ⚠️ Limited Support | Requires custom rootfs images |
+| Architectuur | Staat | Opmerkingen |
+|------------|--------|-------|
+| amd64 | ✅ Volledige ondersteuning | Aanbevolen voor de meeste gebruikers |
+| arm64 | ✅ Volledige ondersteuning | Ideaal voor ARM-gebaseerde servers |
+| riscv64 | ⚠️Beperkte ondersteuning | Vereist aangepaste rootfs-images |
 
-> [!IMPORTANT]
-> For `riscv64` architecture, you must provide or host your own rootfs images. Currently, only Chimera Linux offers native support for riscv64 in this egg.
+> [!BELANGRIJK]
+> Voor de `riscv64`-architectuur moet u uw eigen rootfs-images leveren of hosten. Momenteel biedt alleen Chimera Linux native ondersteuning voor riscv64 in deze egg.
 
 ## <img width="20" height="20" src="https://www.kernel.org/theme/images/logos/favicon.png" /> Available Linux Distributions
 
@@ -58,39 +58,39 @@ A powerful and lightweight Virtual Private Server (VPS) egg for Pterodactyl Pane
 - <img width="16" height="16" src="https://en.altlinux.org/favicon.svg" /> Alt Linux
 - <img width="16" height="16" src="https://www.openeuler.org/favicon.ico" /> openEuler
 
-## 🚀 Quick Start
+## 🚀 Snelle start
 
-1. **Download the Egg**
-   - Download the `egg-vps.json` configuration file to your local machine.
-2. **Import to Pterodactyl**
-   - Navigate to the Admin Panel
-   - Go to Nests > Import Egg
-   - Upload the `egg-vps.json` file
-   - Configure as needed
+1. **Download de egg**
+   - Download het configuratiebestand `egg-vps.json` naar uw lokale machine.
+2. **Importeren naar Pterodactyl**
+   - Navigeer naar het beheerdersdashboard
+   - Ga naar Nest > Import Egg
+   - Upload het `egg-vps.json`-bestand
+   - Configureer indien nodig
 
-3. **Deploy Your VPS**
-   - Create a new server using the VPS egg
-   - Configure resources
-   - Start your instance
+3. **Implementeer uw VPS**
+   - Maak een nieuwe server met behulp van het VPS-Egg
+   - Configureer bronnen
+   - Start uw exemplaar
 
-## How to use SSH?
+## Hoe SSH gebruiken?
 
-#### Install the Custom SSH Server:
-   - After installing the desired distro, use the `install-ssh` command to install our custom SSH server.
+#### Installeer de aangepaste SSH-server:
+   - Na het installeren van de gewenste distro gebruikt u het commando `install-ssh` om onze aangepaste SSH-server te installeren.
 
-#### Configuration Options
+#### Configuratieopties
 
-The configuration file is located at `/.ssh_config` and supports the following options:
+Het configuratiebestand bevindt zich op `/.ssh_config` en ondersteunt de volgende opties:
 
-- `SSH_PORT`: The port on which the SSH server will listen. The default is `2222`.
-- `SSH_USER`: The username for SSH authentication.
-- `SSH_PASSWORD`: The password for SSH authentication.
-- `SSH_TIMEOUT`: The timeout duration in seconds for SSH connections. Leave it empty or set it to `0` to disable the timeout.
-- `SFTP_ENABLE`: Enable or disable SFTP. Set to `true` to enable SFTP.
+- `SSH_PORT`: De poort waarop de SSH-server zal luisteren. De standaardwaarde is `2222`.
+- `SSH_USER`: De gebruikersnaam voor SSH-authenticatie.
+- `SSH_PASSWORD`: Het wachtwoord voor SSH-authenticatie.
+- `SSH_TIMEOUT`: De time-outduur in seconden voor SSH-verbindingen. Laat het leeg of stel het in op `0` om de time-out uit te schakelen.
+- `SFTP_ENABLE`: SFTP in- of uitschakelen. Stel in op 'true' om SFTP in te schakelen.
 
-#### Example `/.ssh_config` Configuration
+#### Voorbeeld `/.ssh_config` Configuratie
 
-Here is an example configuration file:
+Hier is een voorbeeldconfiguratiebestand:
 
 ```ini
 SSH_PORT=50000
@@ -100,9 +100,9 @@ SSH_TIMEOUT=0
 SFTP_ENABLE=true
 ```
 
-## Contributing
+## Bijdragen
 
-Contributions are welcome. If you have any suggestions, improvements, or bug fixes, feel free to submit a pull request.
+Bijdragen zijn welkom. Als u suggesties, verbeteringen of bugfixes heeft, kunt u een pull-verzoek indienen.
 
-## License
-This project is open-source and available under the MIT License. See the [LICENSE](https://github.com/ysdragon/Pterodactyl-VPS-Egg/blob/main/LICENSE) file for more details.
+## Licentie
+Dit project is open-source en beschikbaar onder de MIT-licentie. Zie de [LICENTIE](https://github.com/effisti/Pterodactyl-VPS-Egg/blob/main/LICENSE) bestand voor meer details.
