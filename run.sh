@@ -188,30 +188,17 @@ install_ssh() {
 
 # Function to print initial banner
 print_banner() {
-    printf "\033c"
-    printf "${GREEN}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}\n"
-    printf "${GREEN}┃                                                                             ┃${NC}\n"
-    printf "${GREEN}┃                           ${PURPLE} Pterodactyl VPS EGG ${GREEN}                             ┃${NC}\n"
-    printf "${GREEN}┃                                                                             ┃${NC}\n"
-    printf "${GREEN}┃                          ${RED}© 2021 - $(date +%Y) ${PURPLE}@ysdragon${GREEN}                            ┃${NC}\n"
-    printf "${GREEN}┃                                                                             ┃${NC}\n"
-    printf "${GREEN}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}\n"
+    printf "${GREEN} VPS by: CristalCloud"
 }
 
 # Function to print a beautiful help message
 print_help_message() {
-    printf "${PURPLE}┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓${NC}\n"
-    printf "${PURPLE}┃                                                                             ┃${NC}\n"
-    printf "${PURPLE}┃                          ${GREEN}✦ Available Commands ✦${PURPLE}                             ┃${NC}\n"
-    printf "${PURPLE}┃                                                                             ┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}clear, cls${GREEN}         ❯  Clear the screen                                  ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}exit${GREEN}               ❯  Shutdown the server                               ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}history${GREEN}            ❯  Show command history                              ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}reinstall${GREEN}          ❯  Reinstall the server                              ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}install-ssh${GREEN}        ❯  Install our custom SSH server                     ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃     ${YELLOW}help${GREEN}               ❯  Display this help message                         ${PURPLE}┃${NC}\n"
-    printf "${PURPLE}┃                                                                             ┃${NC}\n"
-    printf "${PURPLE}┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛${NC}\n"
+    printf "${YELLOW}clear, cls${GREEN}         ❯  Maak het scherm leeg"
+    printf "${YELLOW}exit${GREEN}               ❯  Sluit de server af"
+    printf "${YELLOW}history${GREEN}            ❯  Toon opdrachtgeschiedenis"
+    printf "${YELLOW}reinstall${GREEN}          ❯  Installeer de server opnieuw"
+    printf "${YELLOW}install-ssh${GREEN}        ❯  Installeer onze aangepaste SSH-server"
+    printf "${YELLOW}help${GREEN}               ❯  Geef dit helpbericht weer"
 }
 
 # Function to handle command execution
@@ -240,12 +227,12 @@ execute_command() {
             return 0
         ;;
         "reinstall")
-            log "INFO" "Reinstalling...." "$GREEN"
+            log "INFO" "Opnieuw installeren...." "$GREEN"
             reinstall
             exit 2
         ;;
         "sudo"*|"su"*)
-            log "ERROR" "You are already running as root." "$RED"
+            log "ERROR" "Je bent al root..." "$RED"
             print_prompt "$user"
             return 0
         ;;
@@ -289,7 +276,7 @@ print_banner
 print_instructions
 
 # Print initial command
-printf "${GREEN}root@${HOSTNAME}${NC}:${RED}$(get_formatted_dir)${NC}#\n"
+printf "${GREEN}root@cristal-cloud${NC}:${RED}$(get_formatted_dir)${NC}#\n"
 
 # Execute autorun.sh
 sh "/autorun.sh"
